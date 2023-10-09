@@ -16,3 +16,14 @@ function generatePassword() {
   }
   password.value = passwordValue;
 }
+
+function copyPassword() {
+  password.select();
+  document.execCommand("copy");
+  Swal.fire({
+    icon: "success",
+    title: "Password copied to clipboard",
+    showConfirmButton: false,
+    timer: 1500,
+  });
+}
